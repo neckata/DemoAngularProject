@@ -1,0 +1,89 @@
+<div class="wrapper" style="overflow-x:hidden">
+	<div class="page-header clear-filter" id="animation">
+		<video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" class="page-header-image rellax-header" style="top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);">
+			<source src="assets/img/header.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+
+		<div class="container">
+			<div class="content-center brand">
+				<h1 class="h1-seo" style="font-weight:bold">{{'mainPage.name' | translate }}</h1>
+				<h3 style="max-width: 550px; margin: auto;font-style:italic;font-weight:bold;">{{'mainPage.description' | translate }}</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="section" id="firstPart">
+			<div class="container">
+				<h3 class="title text-center">{{'navigation.firstPart' | translate}}</h3>
+				
+				<div class="row">
+					firstPart
+				</div>
+			</div>
+		</div>
+
+		<div class="separator separator-primary"></div>
+
+		<div class="section" id="secondPart">
+			<div class="container">
+				<h3 class="title text-center">{{'mainPage.secondPart' | translate}}</h3>
+
+				<div class="row">
+					secondPart
+				</div>
+			</div>
+		</div>
+
+		<div class="separator separator-primary"></div>
+
+		<div id="offer" class="section">
+			<div class="container">
+				<h3 class="title text-center">{{'navigation.thirdPart' | translate}}</h3>
+
+				<div class="row">
+					thirdPart
+				</div>
+			</div>
+		</div>
+
+		<div class="separator separator-primary"></div>
+
+		<div class="section" id="members">
+			<div class="container">
+				<h2 class="title text-center">{{'mainPage.forthPart' | translate}}</h2>
+				<div class="row">
+					forthPart
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer" data-background-color="black">
+			<div class="container">
+				<nav style="float:initial;display:initial">
+					<ul>
+						<li>
+							<a (click)="scroll('services')" style="cursor:pointer">
+								{{'mainPage.name' | translate }}
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+	</div>
+
+	<div class="fixed-plugin">
+		<div class="dropdown show-dropdown open">
+			<a (click)="openMessage()" data-toggle="dropdown" aria-expanded="true" style="cursor:pointer">
+				<i class="fa fa-whatsapp fa-2x"> </i>
+			</a>
+			<div class="contact-us-div" [@widthGrow]="state">
+				<strong>{{'mainPage.fellFree' | translate }}</strong> <p></p>
+				<a href="tel:123-456-7890" style="font-style: italic; text-decoration-line: underline;">07902 909932</a> <p></p>
+				<i>{{'mainPage.textUs' | translate }}</i>
+			</div>
+		</div>
+	</div>
+</div>

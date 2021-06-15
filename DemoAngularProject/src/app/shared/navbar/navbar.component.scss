@@ -1,0 +1,9 @@
+.nav-link-info {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-link-info:hover {
+    animation-duration: 1s;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}

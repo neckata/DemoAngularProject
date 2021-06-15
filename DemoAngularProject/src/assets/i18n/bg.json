@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "aboutUs": "About us",
+    "title": "Title",
+    "contacts": "Contacts",
+    "close": "Close",
+    "news": "News",
+    "contactUs": "Contact Us"
+  },
+  "mainPage": {
+    "name": "Title",
+    "description": "Description"
+  }
+}

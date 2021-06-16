@@ -1,9 +1,11 @@
 <div class="wrapper" style="overflow-x:hidden">
-	<div class="page-header clear-filter" id="animation">
-		<video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" class="page-header-image rellax-header" style="top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);">
+	<div class="page-header clear-filter" id="header">
+		<!--<video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" class="page-header-image rellax-header" style="top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);">
 			<source src="assets/img/header.mp4" type="video/mp4">
 			Your browser does not support HTML5 video.
-		</video>
+		</video>-->
+
+		<div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/header.jpg')"></div>
 
 		<div class="container">
 			<div class="content-center brand">
@@ -17,9 +19,11 @@
 		<div class="section" id="firstPart">
 			<div class="container">
 				<h3 class="title text-center">{{'navigation.firstPart' | translate}}</h3>
-				
 				<div class="row">
-					firstPart
+					<app-card [item]="firstPart"
+										[showButton]="true"
+										class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+					</app-card>
 				</div>
 			</div>
 		</div>
@@ -28,33 +32,40 @@
 
 		<div class="section" id="secondPart">
 			<div class="container">
-				<h3 class="title text-center">{{'mainPage.secondPart' | translate}}</h3>
-
+				<h3 class="title text-center">{{'navigation.secondPart' | translate}}</h3>
 				<div class="row">
-					secondPart
+					<app-card [item]="secondPart"
+										[showButton]="true"
+										class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+					</app-card>
 				</div>
 			</div>
 		</div>
 
 		<div class="separator separator-primary"></div>
 
-		<div id="offer" class="section">
+		<div id="thirdPart" class="section">
 			<div class="container">
 				<h3 class="title text-center">{{'navigation.thirdPart' | translate}}</h3>
-
 				<div class="row">
-					thirdPart
+					<app-card [item]="thirdPart"
+										[showButton]="true"
+										class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+					</app-card>
 				</div>
 			</div>
 		</div>
 
 		<div class="separator separator-primary"></div>
 
-		<div class="section" id="members">
+		<div class="section" id="fourthPart">
 			<div class="container">
-				<h2 class="title text-center">{{'mainPage.forthPart' | translate}}</h2>
+				<h3 class="title text-center">{{'navigation.fourthPart' | translate}}</h3>
 				<div class="row">
-					forthPart
+					<app-card [item]="fourthPart"
+										[showButton]="true"
+										class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+					</app-card>
 				</div>
 			</div>
 		</div>
@@ -80,9 +91,9 @@
 				<i class="fa fa-whatsapp fa-2x"> </i>
 			</a>
 			<div class="contact-us-div" [@widthGrow]="state">
-				<strong>{{'mainPage.fellFree' | translate }}</strong> <p></p>
-				<a href="tel:123-456-7890" style="font-style: italic; text-decoration-line: underline;">07902 909932</a> <p></p>
-				<i>{{'mainPage.textUs' | translate }}</i>
+				<strong>{{'navigation.contactUs' | translate }}</strong> <p></p>
+				<a href="tel:888-888-888" style="font-style: italic; text-decoration-line: underline;">08888888</a> <p></p>
+				<i>{{'navigation.textUs' | translate }}</i>
 			</div>
 		</div>
 	</div>

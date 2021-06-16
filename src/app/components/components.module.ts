@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { SafePipe } from '../utils/safe.pipe';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
     imports: [
@@ -26,7 +27,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         BrowserModule
     ],
     declarations: [
-        ComponentsComponent,
+      ComponentsComponent,
+      CardComponent,
         SafePipe
     ],
     exports: [ComponentsComponent],

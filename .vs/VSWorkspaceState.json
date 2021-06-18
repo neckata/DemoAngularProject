@@ -4,10 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
+    "\\src\\app\\components\\card",
+    "\\src\\app\\models",
+    "\\src\\app\\shared",
     "\\src\\assets",
-    "\\src\\assets\\sass",
-    "\\src\\assets\\sass\\styles"
+    "\\src\\assets\\i18n",
+    "\\src\\assets\\img"
   ],
-  "SelectedNode": "\\src\\assets\\sass\\styles\\_sections.scss",
+  "SelectedNode": "\\src\\assets\\i18n\\en.json",
   "PreviewInSolutionExplorer": false
 }

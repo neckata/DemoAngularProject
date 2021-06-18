@@ -32,10 +32,10 @@ export class ComponentsComponent implements OnInit, OnDestroy {
 
   public state = "closed";
 
-  public firstPart: Item;
-  public secondPart: Item;
-  public thirdPart: Item;
-  public fourthPart: Item;
+  public firstParts: Item[] = [];
+  public secondParts: Item[] = [];
+  public thirdParts: Item[] = [];
+  public fourthParts: Item[] = [];
 
   constructor(config: NgbAccordionConfig) {
     config.closeOthers = true;
@@ -48,10 +48,12 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     const body = document.getElementsByTagName('body')[0];
     body.classList.add('index-page');
 
-    this.firstPart = new Item("item.headline1", "item.description1", "logo.png");
-    this.secondPart = new Item("item.headline2", "item.description2", "logo.png");
-    this.thirdPart = new Item("item.headline3", "item.description3", "logo.png");
-    this.fourthPart = new Item("item.headline4", "item.description4", "logo.png");
+    for (let i = 0; i < 3; i++) {
+      this.firstParts.push(new Item("item.headline1", "item.description1", "logo.png"));
+      this.secondParts.push(new Item("item.headline2", "item.description2", "logo.png"));
+      this.thirdParts.push(new Item("item.headline3", "item.description3", "logo.png"));
+      this.fourthParts.push(new Item("item.headline4", "item.description4", "logo.png"));
+    }
   }
 
   openMessage() {

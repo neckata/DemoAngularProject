@@ -12,6 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SafePipe } from '../utils/safe.pipe';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CardComponent } from './card/card.component';
+import { PageComponent } from './page/page.component';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import { CardComponent } from './card/card.component';
     declarations: [
       ComponentsComponent,
       CardComponent,
-        SafePipe
+        SafePipe,
+        PageComponent
     ],
     exports: [ComponentsComponent],
     providers: [

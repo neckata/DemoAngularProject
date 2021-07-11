@@ -38,7 +38,7 @@
   },
   "calendar": {
     "title": "Calendar"
-  }
+  },
   "messages": {
     "SuccessRegister": "User registers successfully!",
     "wrongLogin": "Invalid username or password",

@@ -1,0 +1,17 @@
+<div [formGroup]="group">
+
+	<input *ngIf="formType == formTypes.File" [placeholder]="placeholder | translate" [formControlName]="name" type="file">
+
+	<mat-form-field *ngIf="formType != formTypes.File" style="width:100%">
+
+		<input *ngIf="formType == formTypes.Text" matInput [placeholder]="placeholder | translate" [formControlName]="name" type="text">
+
+		<input *ngIf="formType == formTypes.Password" matInput [placeholder]="placeholder | translate" [formControlName]="name" type="password">
+
+		<textarea *ngIf="formType == formTypes.TextArea" matInput [placeholder]="placeholder | translate" [formControlName]="name"></textarea>
+
+		<mat-error *ngIf="hasErrors()">
+			<validation-errors [control]="control" [labelName]="placeholder | translate"></validation-errors>
+		</mat-error>
+	</mat-form-field>
+</div>

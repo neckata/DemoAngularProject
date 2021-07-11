@@ -7,16 +7,24 @@
     "news": "News",
     "contactUs": "Contact Us",
     "textUs": "Message Us",
-    "firstPart": "First Part",
-    "secondPart": "Second Part",
-    "thirdPart": "Third Part",
-    "fourthPart": "Fourth Part"
+    "mainPage": "Main Page",
+    "secondPage": "Second Page",
+    "calendar": "Calendar",
+    "map": "Map"
   },
   "mainPage": {
-    "name": "Title",
-    "description": "Description",
+    "name": "Main Page",
+    "description": "Main Page Description",
     "goToHeader": "Go to Header",
     "work": "Let's get to work and make your business great."
+  },
+  "email": {
+    "title": "Contact Us",
+    "description": "Your message is important to us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
   },
   "item": {
     "headline1": "First Part",
@@ -27,5 +35,19 @@
     "description2": "Second Part Description",
     "description3": "Third Part Description",
     "description4": "Fourth Part Description"
+  },
+  "calendar": {
+    "title": "Calendar"
+  }
+  "messages": {
+    "SuccessRegister": "User registers successfully!",
+    "wrongLogin": "Invalid username or password",
+    "SuccessUpdateUser": "User has been updated successfully!"
+  },
+  "errors": {
+    "required": "{{field}} is required.",
+    "invalidPassword": "Invalid password. Password must be at least 6 characters long, and contain a number.",
+    "maxlength": "{{field}} can't contain more than {{requiredLength}} characters.",
+    "minlength": "{{field}} must contain atleast {{requiredLength}} characters."
   }
 }

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
@@ -27,77 +27,87 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { ValidationErrorsComponent } from './shared/components/validation-errors/validation-errors.component';
+import { FormControlComponent } from './shared/components/form-control/form-control.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        BrowserModule,
-        RouterModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatMenuModule,
-        MatSelectModule,
-        MatTabsModule,
-        MatInputModule,
-        MatProgressSpinnerModule,
-        MatChipsModule,
-        MatSidenavModule,
-        MatCheckboxModule,
-        MatCardModule,
-        MatListModule,
-        MatIconModule,
-        MatTooltipModule,
-        MatSnackBarModule,
-        MatSlideToggleModule,
-        MatDividerModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        })
-    ],
-    exports: [
-        TranslateModule,
-        CommonModule,
-        FormsModule,
-        NgbModule,
-        RouterModule,
-        MatButtonModule,
-        MatToolbarModule,
-        MatMenuModule,
-        MatSelectModule,
-        MatTabsModule,
-        MatInputModule,
-        MatProgressSpinnerModule,
-        MatChipsModule,
-        MatSidenavModule,
-        MatCheckboxModule,
-        MatCardModule,
-        MatListModule,
-        MatIconModule,
-        MatTooltipModule,
-        MatSnackBarModule,
-        MatSlideToggleModule,
-        MatDividerModule,
-        MatDatepickerModule,
-        MatNativeDateModule
-    ]
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule, 
+    BrowserModule,
+    RouterModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatListModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatSlideToggleModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  ],
+  exports: [
+    TranslateModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
+    RouterModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatChipsModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatListModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatSlideToggleModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ValidationErrorsComponent,
+    FormControlComponent
+  ],
+  declarations: [
+    ValidationErrorsComponent,
+    FormControlComponent
+  ]
 })
 export class SharedModule {
-    constructor(translate: TranslateService) {
-        translate.addLangs(["en", "bg"]);
-        translate.setDefaultLang('en');
+  constructor(translate: TranslateService) {
+    translate.addLangs(["en", "bg"]);
+    translate.setDefaultLang('en');
 
-        const browserLang = translate.getBrowserLang();
-        translate.use(browserLang.match(/en|bg/) ? browserLang : 'en');
-    }
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|bg/) ? browserLang : 'en');
+  }
 }
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }

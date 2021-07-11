@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\components",
-    "\\src\\app\\components\\card",
+    "\\src\\app\\components\\email",
     "\\src\\app\\models",
-    "\\src\\app\\shared",
     "\\src\\assets",
-    "\\src\\assets\\i18n",
-    "\\src\\assets\\img"
+    "\\src\\assets\\sass",
+    "\\src\\assets\\sass\\styles",
+    "\\src\\assets\\sass\\styles\\variables"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\app\\components\\email\\email.component.html",
   "PreviewInSolutionExplorer": false
 }

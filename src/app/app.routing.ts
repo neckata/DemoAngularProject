@@ -4,14 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { ComponentsComponent } from './components/components.component';
 import { PageComponent } from './components/page/page.component';
+import { EmailComponent } from './components/email/email.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { MapsComponent } from './components/maps/maps.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: 'index',
+    pathMatch: 'full'
+  },
   { path: 'index', component: ComponentsComponent },
-  { path: 'first', component: PageComponent },
-  { path: 'second', component: PageComponent },
-  { path: 'third', component: PageComponent },
-  { path: 'fourth', component: PageComponent }
+  { path: 'email', component: EmailComponent },
+  { path: 'secondPage', component: PageComponent },
+  { path: 'map', component: MapsComponent },
+  { path: 'calendar', component: CalendarComponent }
+
 ];
 
 @NgModule({

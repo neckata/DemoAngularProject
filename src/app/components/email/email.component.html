@@ -1,0 +1,30 @@
+<div class="wrapper" style="overflow-x:hidden">
+  <div class="page-header clear-filter" id="header">
+    <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/email.jpg')"></div>
+
+    <div class="container">
+      <div class="content-center brand">
+        <h1 class="h1-seo" style="font-weight:bold">{{'email.title' | translate }}</h1>
+        <h3 style="max-width: 550px; margin: auto;font-style:italic;font-weight:bold;">{{'email.description' | translate }}</h3>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="container-fluid">
+        <div class="card">
+          <div class="card-header card-header-info">
+            <h4 class="card-title">{{'email.title' | translate}}</h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
+              <form-control name="name" [group]="emailForm" [formType]="formTypes.Text" placeholder="email.name"></form-control>
+              <form-control name="email" [group]="emailForm" [formType]="formTypes.Text" placeholder="email.email"></form-control>
+              <form-control name="message" [group]="emailForm" [formType]="formTypes.TextArea" placeholder="email.message"></form-control>
+              <button mat-raised-button type="submit" class="btn btn-info pull-right" [disabled]="!emailForm.valid">{{'email.send' | translate}}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

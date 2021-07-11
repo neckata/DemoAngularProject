@@ -1,22 +1,10 @@
-import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Item } from '../models/item.model';
 
 @Component({
   selector: 'app-components',
-  templateUrl: './components.component.html',
-  animations: [
-    trigger('widthGrow', [
-      state('closed', style({
-        opacity: 0,
-      })),
-      state('open', style({
-        opacity: 1
-      })),
-      transition('* => *', animate(150))
-    ])
-  ]
+  templateUrl: './components.component.html'
 })
 
 export class ComponentsComponent implements OnInit, OnDestroy {
@@ -30,7 +18,7 @@ export class ComponentsComponent implements OnInit, OnDestroy {
   public next = 0;
   public staggeringApproaches = [];
 
-  public state = "closed";
+
 
   public firstParts: Item[] = [];
   public secondParts: Item[] = [];
@@ -56,9 +44,6 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     }
   }
 
-  openMessage() {
-    (this.state == "closed") ? this.state = "open" : this.state = "closed";
-  }
 
   ngOnDestroy() {
     const navbar = document.getElementsByTagName('nav')[0];

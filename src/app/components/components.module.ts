@@ -13,6 +13,9 @@ import { SafePipe } from '../utils/safe.pipe';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CardComponent } from './card/card.component';
 import { PageComponent } from './page/page.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { MapsComponent } from './maps/maps.component';
+import { EmailComponent } from './email/email.component';
 
 @NgModule({
     imports: [
@@ -31,7 +34,10 @@ import { PageComponent } from './page/page.component';
       ComponentsComponent,
       CardComponent,
         SafePipe,
-        PageComponent
+        PageComponent,
+        CalendarComponent,
+        MapsComponent,
+        EmailComponent
     ],
     exports: [ComponentsComponent],
     providers: [

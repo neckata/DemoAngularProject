@@ -7,6 +7,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AgmCoreModule } from '@agm/core'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ComponentsModule,
     HttpClientModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyALlmqcnvJgWug07siV2jV0BNFsHqve1dw'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
